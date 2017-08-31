@@ -1,8 +1,8 @@
 let s:vim_home = '~/dotfiles/.vim/'
 
 let config_list = [
-  \ 'general.vim',
   \ 'plugins.vim',
+  \ 'general.vim',
   \ 'functions.vim',
   \ 'theme.vim',
   \ 'settings.vim',
