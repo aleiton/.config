@@ -1,4 +1,5 @@
-set rtp+=~/dotfiles/.vim/bundle/vundle/
+set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
+filetype off
 
 call vundle#begin()
  
@@ -32,5 +33,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'gregsexton/matchtag'
 Plugin 'mattn/emmet-vim'
 Plugin 'ap/vim-css-color'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
