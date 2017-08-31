@@ -1,4 +1,4 @@
-set rtp+=~/.dotfiles/.vim/bundle/vundle/
+set rtp+=~/dotfiles/.vim/bundle/vundle/
 
 call vundle#begin()
  
