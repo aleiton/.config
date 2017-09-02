@@ -1,4 +1,4 @@
-syntax on
+set nocompatible
 filetype plugin indent on
 set tabstop=2
 set softtabstop=2

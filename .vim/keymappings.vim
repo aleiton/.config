@@ -6,7 +6,7 @@ inoremap jk <esc>
 inoremap <esc> <nop> 
 
 "Arrow keys diabled
-noremap <up> <nop>
+noremap <up> <Nop>
 noremap <right> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
@@ -17,7 +17,7 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Stop highligthing matches
-nnoremap <esc> :nohlsearch<cr>
+"nnoremap <esc> :nohlsearch<cr>
 
-map <TAB> :NERDTreeToggle<CR>
+map <tab> :NERDTreeToggle<cr>
 
