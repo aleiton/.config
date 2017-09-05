@@ -7,4 +7,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_ruby_mri_exec = '/Users/aleiton/.rvm/rubies/ruby-2.4.0/bin/ruby'
 let g:syntastic_ruby_rubocop_exec = '/Users/aleiton/.rvm/gems/ruby-2.4.0/bin/rubocop'
-
+let g:syntastic_typescript_checkers=['tslint']
