@@ -17,7 +17,7 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Stop highligthing matches
-"nnoremap <esc> :nohlsearch<cr>
+nnoremap <leader>jk :nohlsearch<cr>
 
 map <tab> :NERDTreeToggle<cr>
 
