@@ -4,9 +4,13 @@ let mapleader = " "
 inoremap jk <esc>
 "Do not use esc key
 inoremap <esc> <nop> 
+ 
+"Save and quit 
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
 
 "Arrow keys diabled
-noremap <up> <Nop>
+noremap <up> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
