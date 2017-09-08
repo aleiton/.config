@@ -1,6 +1,7 @@
 set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
 filetype off
 
+call vundle#rc("~/dotfiles/.vim/bundle")
 call vundle#begin()
  
 " let vundle manage vundle
