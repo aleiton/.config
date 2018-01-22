@@ -8,5 +8,4 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_ruby_mri_exec = '~/.rvm/rubies/ruby-2.4.0/bin/ruby'
 let g:syntastic_ruby_rubocop_exec = '~/.rvm/gems/ruby-2.4.0/bin/rubocop'
 let g:syntastic_typescript_checkers=['tslint']
-let g:syntastic_typescript_tslint_args = "--config ~/dotfiles/tslint.json"
 let g:syntastic_javascript_checkers = ['jshint']

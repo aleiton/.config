@@ -35,5 +35,6 @@ Plugin 'gregsexton/matchtag'
 Plugin 'mattn/emmet-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
