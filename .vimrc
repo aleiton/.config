@@ -11,7 +11,7 @@ let config_list = [
   \ 'languages.vim',
   \ 'plugin_settings/*.vim'
 \]
- 
+
 for files in config_list
   for f in split(glob(s:vim_home.files), '\n')
     exec 'source '.f

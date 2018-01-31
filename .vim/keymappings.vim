@@ -1,11 +1,15 @@
 let mapleader = " "
 
-"Escape from Insert Mode
+"ESCAPE
+"-from Insert Mode
 inoremap jk <esc>
+"-from Visual Mode
+vnoremap <leader>jk <esc>
 "Do not use esc key
 inoremap <esc> <nop> 
- 
-"Save and quit 
+vnoremap <esc> <nop> 
+
+"Save and quit
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 
