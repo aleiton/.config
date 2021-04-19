@@ -1,0 +1,1 @@
+let $MYVIMRC="~/dotfiles/.vimrc"
