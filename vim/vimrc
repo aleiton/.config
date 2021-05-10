@@ -1,4 +1,4 @@
-let s:vim_home = '~/dotfiles/.vim/'
+let s:vim_home = '~/.config/vim/'
 
 let config_list = [
   \ 'general.vim',
