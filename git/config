@@ -1,0 +1,14 @@
+[color]
+	ui = true
+[user]
+	name = aleiton
+	email = aleiton1993@gmail.com
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	ff = only

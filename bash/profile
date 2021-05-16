@@ -1,0 +1,29 @@
+# Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
+PATH=/usr/local/bin:$PATH
+PATH=$HOME/bin:$PATH
+export PATH
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+  [ -r "$file" ] && source "$file"
+done
+unset file
+
+eval "$(rbenv init -)"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+source "$HOME/.cargo/env"
+
+if [ -f ~/$XDG_CONFIG_HOME/bash/bashrc ]; then
+	. ~/$XDG_CONFIG_HOME/bash/bashrc
+fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
