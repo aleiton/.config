@@ -61,5 +61,6 @@ Plug 'cespare/vim-toml'
 Plug 'w0rp/ale'
 
 " Autocompletion / Omnicompletion
+Plug 'lifepillar/vim-mucomplete'
 
 call plug#end()

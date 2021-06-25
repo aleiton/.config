@@ -1,4 +1,7 @@
 # Window Customization
+env:
+  TERM: alacritty
+
 window:
   dimensions:
     columns: 180
