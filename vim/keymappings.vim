@@ -53,4 +53,3 @@ nnoremap <leader>jk :nohlsearch<cr>
 
 map <tab> :NERDTreeToggle<cr>
 
-

@@ -2,7 +2,7 @@
 	ui = true
 [user]
 	name = aleiton
-	email = aleiton1993@gmail.com
+	email = alejandro.leiton@meraki.net
 [credential]
 	helper = osxkeychain
 [filter "lfs"]

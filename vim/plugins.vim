@@ -49,7 +49,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-ruby/vim-ruby'
@@ -57,10 +57,15 @@ Plug 'tpope/vim-rails'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 
-" Lint / Syntax highlight
-Plug 'w0rp/ale'
+
+" LSP - Lint / Syntax highlight
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+" Plug 'w0rp/ale'
 
 " Autocompletion / Omnicompletion
-Plug 'lifepillar/vim-mucomplete'
+"Plug 'lifepillar/vim-mucomplete'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()

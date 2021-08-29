@@ -1,0 +1,6 @@
+set completion-ignore-case on
+set completion-prefix-display-length 2
+set completion-query-items -1
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set skip-completed-text on
