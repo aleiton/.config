@@ -12,7 +12,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.config/vim/plugged')
 
 " Status bar
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 
 " Navigation & search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
