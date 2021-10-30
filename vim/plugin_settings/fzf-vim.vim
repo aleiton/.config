@@ -1,1 +1,1 @@
-nnoremap <C-f> :Files<Cr>
+nnoremap <C-f> :GFiles<Cr>
