@@ -1,1 +1,15 @@
-nnoremap <C-f> :GFiles<Cr>
+nnoremap <Leader>f :GFiles<CR>
+nnoremap <Leader>F :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>t :BTags<CR>
+nnoremap <Leader>T :Tags<CR>
+nnoremap <Leader>l :BLines<CR>
+nnoremap <Leader>L :Lines<CR>
+nnoremap <Leader>' :Marks<CR>
+nnoremap <Leader>/ :Rg<Space>
+nnoremap <Leader>H :Helptags!<CR>
+nnoremap <Leader>C :Commands<CR>
+nnoremap <Leader>: :History:<CR>
+nnoremap <Leader>M :Maps<CR>
+nnoremap <Leader>s :Filetypes<CR>

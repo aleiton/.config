@@ -5,6 +5,7 @@ let mapleader = " "
 inoremap jk <esc>
 "-from Visual Mode
 vnoremap <leader>jk <esc>
+
 "Do not use esc key
 noremap <esc> <nop>
 inoremap <esc> <nop>
