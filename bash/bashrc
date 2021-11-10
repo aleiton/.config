@@ -42,11 +42,21 @@ export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
 export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 
-# TMUX init session
-tmux has-session -t development
+# *-- TMUX init session --*
+
+# 1. First you check if a tmux session exists with a given name.
+tmux has-session -t DEV
+
+# 2. Create the session if it doesn't exists.
 if [ $? != 0  ]
 then
-    tmux new-session -s development
+    tmux new-session -s DEV
 fi
-tmux attach -t development  
+
+# 3. Attach if outside of tmux, switch if you're in tmux.
+if [[ -z "$TMUX"  ]]; then
+    tmux attach -t DEV
+else
+    tmux switch-client -t DEV
+fi
 
