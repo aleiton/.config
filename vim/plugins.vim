@@ -68,4 +68,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+" Tabs and Buffers
+Plug 'bagrat/vim-buffet'
+
 call plug#end()
