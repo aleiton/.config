@@ -50,7 +50,8 @@ nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Stop highligthing matches
-nnoremap <leader>jk :nohlsearch<cr>
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 map <tab> :NERDTreeToggle<cr>
 
