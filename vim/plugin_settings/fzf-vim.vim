@@ -1,5 +1,6 @@
 nnoremap <Leader>f :GFiles<CR>
 nnoremap <Leader>F :Files<CR>
+nnoremap <Leader>s :GFiles?<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>h :History<CR>
 nnoremap <Leader>t :BTags<CR>
@@ -12,4 +13,4 @@ nnoremap <Leader>H :Helptags!<CR>
 nnoremap <Leader>C :Commands<CR>
 nnoremap <Leader>: :History:<CR>
 nnoremap <Leader>M :Maps<CR>
-nnoremap <Leader>s :Filetypes<CR>
+nnoremap <Leader>S :Filetypes<CR>
