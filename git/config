@@ -4,7 +4,7 @@
 	name = aleiton
 	email = aleiton1993@gmail.com
 [credential]
-	helper = osxkeychain
+	helper = store
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

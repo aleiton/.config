@@ -1,0 +1,120 @@
+# frozen_string_literal: true
+
+# =============================================================================
+# IRB Configuration
+# =============================================================================
+
+require 'irb/completion'
+
+# History configuration
+IRB.conf[:SAVE_HISTORY] = 10_000
+IRB.conf[:HISTORY_FILE] = "#{ENV['XDG_DATA_HOME'] || "#{ENV['HOME']}/.local/share"}/irb/history"
+
+# Enable auto-indent and colorization
+IRB.conf[:AUTO_INDENT] = true
+IRB.conf[:USE_COLORIZE] = true
+
+# Custom prompt with colors
+# %N = command name, %m = main object, %l = delimiter, %i = line number
+IRB.conf[:PROMPT][:CUSTOM] = {
+  PROMPT_I: "\e[38;5;75m%N\e[0m(\e[38;5;221m%m\e[0m):%03n> ",
+  PROMPT_S: "\e[38;5;75m%N\e[0m(\e[38;5;221m%m\e[0m):%03n%l ",
+  PROMPT_C: "\e[38;5;75m%N\e[0m(\e[38;5;221m%m\e[0m):%03n* ",
+  RETURN: "=> %s\n"
+}
+IRB.conf[:PROMPT_MODE] = :CUSTOM
+
+# Create history directory if it doesn't exist
+history_dir = File.dirname(IRB.conf[:HISTORY_FILE])
+Dir.mkdir(history_dir) unless File.exist?(history_dir)
+
+# =============================================================================
+# Awesome Print (pretty object display)
+# =============================================================================
+# Add to your project's Gemfile: gem 'awesome_print', group: :development
+begin
+  require 'awesome_print'
+  AwesomePrint.irb!  # Use awesome_print for all output
+rescue LoadError
+  # awesome_print not available in this project
+end
+
+# =============================================================================
+# Helper Methods (available in console)
+# =============================================================================
+
+# Clear screen
+def clear
+  system('clear') || system('cls')
+end
+alias c clear
+
+# Copy to clipboard (macOS)
+def pbcopy(str)
+  IO.popen('pbcopy', 'w') { |p| p << str.to_s }
+  str
+end
+
+# Paste from clipboard (macOS)
+def pbpaste
+  `pbpaste`
+end
+
+# Benchmark a block
+def benchmark(&block)
+  require 'benchmark'
+  result = nil
+  time = Benchmark.measure { result = block.call }
+  puts "\e[38;5;245m#{time}\e[0m"
+  result
+end
+alias bm benchmark
+
+# =============================================================================
+# Rails-specific enhancements (loaded only in Rails console)
+# =============================================================================
+
+if defined?(Rails)
+  # Shorter prompt showing Rails env
+  env_color = case Rails.env
+              when 'production'  then "\e[38;5;196m"  # Red
+              when 'staging'     then "\e[38;5;208m"  # Orange
+              when 'development' then "\e[38;5;82m"   # Green
+              else "\e[38;5;245m"                      # Gray
+              end
+
+  IRB.conf[:PROMPT][:RAILS] = {
+    PROMPT_I: "#{env_color}#{Rails.env[0..2]}\e[0m> ",
+    PROMPT_S: "#{env_color}#{Rails.env[0..2]}\e[0m%l ",
+    PROMPT_C: "#{env_color}#{Rails.env[0..2]}\e[0m* ",
+    RETURN: "=> %s\n"
+  }
+  IRB.conf[:PROMPT_MODE] = :RAILS
+
+  # Reload Rails classes
+  def reload!
+    ActionDispatch::Reloader.cleanup!
+    ActionDispatch::Reloader.prepare!
+    true
+  end
+
+  # Show SQL queries in console
+  def loud_sql
+    ActiveRecord::Base.logger = Logger.new($stdout)
+  end
+
+  def quiet_sql
+    ActiveRecord::Base.logger = nil
+  end
+
+  # Quick model count
+  def counts
+    ApplicationRecord.descendants.each do |model|
+      next if model.abstract_class?
+      puts "#{model.name}: #{model.count}"
+    rescue StandardError
+      nil
+    end
+    nil
+  end
+end

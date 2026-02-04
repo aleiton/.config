@@ -1,4 +1,8 @@
-vim/autoload
-vim/plugged
+# Nvim (separate LazyVim repo)
+nvim/
+
+# Tmux plugins (installed by tpm)
 tmux/plugins
+
+# npm configstore
 configstore
