@@ -17,6 +17,7 @@ My XDG-compliant configuration files.
 | `readline/` | Input line editing |
 | `starship.toml` | Cross-shell prompt |
 | `tmux/` | Terminal multiplexer |
+| `zsh/` | Zsh shell config |
 
 ## Not included
 
@@ -24,4 +25,12 @@ My XDG-compliant configuration files.
 
 ## Shell setup
 
-Using zsh with XDG Base Directory support. See `~/.zshrc` for environment variables.
+Using zsh with full XDG Base Directory support. The only file in `$HOME` is `~/.zshenv` which sets `ZDOTDIR` to point here.
+
+Files:
+- `zsh/.zshenv` - XDG variables, cargo env
+- `zsh/.zprofile` - PATH, mise, nvm (login shells)
+- `zsh/.zshrc` - Interactive shell config, fzf, autosuggestions
+
+Symlinks from home:
+- `~/.tmux.conf` -> `~/.config/tmux/tmux.conf`
