@@ -1,2 +1,12 @@
+# =============================================================================
+# Mise Configuration (runtime version manager)
+# https://mise.jdx.dev/
+# =============================================================================
+
 [tools]
-ruby = "3"
+ruby = "3"  # Use latest Ruby 3.x
+
+# Add more tools as needed:
+# node = "20"
+# python = "3.12"
+# go = "latest"

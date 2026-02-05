@@ -1,14 +1,41 @@
-[color]
-	ui = true
+# =============================================================================
+# Git Configuration
+# =============================================================================
+
 [user]
 	name = aleiton
 	email = aleiton1993@gmail.com
+
+[color]
+	ui = true
+
 [credential]
 	helper = store
+
+[pull]
+	ff = only  # Only fast-forward merges (safer, avoids merge commits)
+
+[push]
+	autoSetupRemote = true  # Auto set upstream on first push
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+	excludesFile = ~/.config/git/ignore
+
+[diff]
+	colorMoved = default  # Highlight moved lines differently
+
+[merge]
+	conflictstyle = diff3  # Show base version in conflicts
+
+[rerere]
+	enabled = true  # Remember conflict resolutions
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[pull]
-	ff = only

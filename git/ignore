@@ -1,0 +1,28 @@
+# =============================================================================
+# Global Git Ignore
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# Environment files (be careful with these)
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Temp files
+tmp/
+*.tmp

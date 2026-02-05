@@ -1,2 +1,12 @@
-# Set the theme to "TwoDark"
+# =============================================================================
+# Bat Configuration (cat replacement with syntax highlighting)
+# https://github.com/sharkdp/bat
+# =============================================================================
+
+# Theme matching terminal colors
 --theme="TwoDark"
+
+# Uncomment to customize:
+# --style="numbers,changes,header"
+# --paging=never
+# --italic-text=always

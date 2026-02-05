@@ -1,6 +1,22 @@
+# =============================================================================
+# Readline Configuration
+# Used by bash, irb, psql, and other readline-based tools
+# =============================================================================
+
+# Case-insensitive tab completion
 set completion-ignore-case on
+
+# Show common prefix before cycling through completions
 set completion-prefix-display-length 2
+
+# Show all completions without prompt (no "Display all X possibilities?")
 set completion-query-items -1
+
+# Show completions on first Tab if ambiguous
 set show-all-if-ambiguous on
+
+# Show completions if no partial completion can be made
 set show-all-if-unmodified on
+
+# Don't duplicate text after completion point
 set skip-completed-text on
