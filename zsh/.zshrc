@@ -39,22 +39,26 @@ export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
 export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 
-# Tmux auto-start DEV session
-tmux has-session -t DEV 2>/dev/null
-if [ $? != 0 ]; then
-    tmux new-session -s DEV
-fi
-if [[ -z "$TMUX" ]]; then
-    tmux attach -t DEV
-else
-    tmux switch-client -t DEV
-fi
-
-# Mise (also needed in interactive shells)
+# Mise (runtime version manager)
 eval "$(~/.local/bin/mise activate zsh)"
 
 # FZF - fuzzy finder (Ctrl+R for history search)
 source <(fzf --zsh)
 
-# Zsh Autosuggestions - fish-like suggestions
+# Zsh Autosuggestions - fish-like suggestions (right arrow to accept)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#5c6370'  # OneDark comment gray
+
+# Zsh Syntax Highlighting - colors commands as you type
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Aliases
+alias reload='exec zsh'
+
+# Tmux auto-start DEV session (at end to not interfere with plugins)
+if command -v tmux &>/dev/null; then
+    if [[ -z "$TMUX" ]]; then
+        tmux has-session -t DEV 2>/dev/null || tmux new-session -d -s DEV
+        tmux attach -t DEV
+    fi
+fi
