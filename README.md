@@ -31,7 +31,7 @@ git clone https://github.com/aleiton/.config.git ~/.config
 
 ## Not tracked
 
-- `nvim/` - Uses [LazyVim](https://github.com/LazyVim/starter) (separate repo)
+- `nvim/` - Uses [LazyVim](https://github.com/LazyVim/starter) - see [docs/nvim-setup.md](docs/nvim-setup.md)
 - `docker/` - Contains local credentials
 
 ## Shell setup
