@@ -4,8 +4,8 @@
 # =============================================================================
 
 # Warning: This config does not include keys that have an unset value
-scan_timeout = 0
-command_timeout = 0
+scan_timeout = 30
+command_timeout = 1000  # milliseconds (increase if git times out)
 add_newline = false
 
 [aws]

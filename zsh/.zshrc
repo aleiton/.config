@@ -45,9 +45,10 @@ eval "$(~/.local/bin/mise activate zsh)"
 # FZF - fuzzy finder (Ctrl+R for history search)
 source <(fzf --zsh)
 
-# Zsh Autosuggestions - fish-like suggestions (right arrow to accept)
+# Zsh Autosuggestions - fish-like suggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#5c6370'  # OneDark comment gray
+bindkey '^f' autosuggest-accept  # Ctrl+f to accept (vim-friendly)
 
 # Zsh Syntax Highlighting - colors commands as you type
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
