@@ -126,6 +126,20 @@ else
     success "~/.zshenv already exists"
 fi
 
+# ~/.claude/CLAUDE.md -> symlink to XDG location
+mkdir -p "$HOME/.claude"
+if [[ -L "$HOME/.claude/CLAUDE.md" ]]; then
+    success "~/.claude/CLAUDE.md symlink already exists"
+elif [[ -f "$HOME/.claude/CLAUDE.md" ]]; then
+    warn "~/.claude/CLAUDE.md exists as a file, backing up to ~/.claude/CLAUDE.md.bak"
+    mv "$HOME/.claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md.bak"
+    ln -sf "$CONFIG_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+    success "Created ~/.claude/CLAUDE.md symlink"
+else
+    ln -sf "$CONFIG_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+    success "Created ~/.claude/CLAUDE.md symlink"
+fi
+
 # ~/.tmux.conf -> symlink to XDG location
 if [[ -L "$HOME/.tmux.conf" ]]; then
     success "~/.tmux.conf symlink already exists"
