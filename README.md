@@ -26,6 +26,7 @@ git clone https://github.com/aleiton/.config.git ~/.config
 | `neofetch/` | System info display |
 | `readline/` | Input line editing |
 | `starship.toml` | Cross-shell prompt |
+| `claude/` | Claude Code global instructions |
 | `tmux/` | Terminal multiplexer |
 | `zsh/` | Zsh shell config |
 
@@ -46,6 +47,7 @@ Using zsh with full XDG Base Directory support.
 
 **Symlinks:**
 - `~/.tmux.conf` -> `~/.config/tmux/tmux.conf`
+- `~/.claude/CLAUDE.md` -> `~/.config/claude/CLAUDE.md`
 
 ## Tmux Keybindings
 
@@ -57,6 +59,10 @@ Using zsh with full XDG Base Directory support.
 | `prefix + -` | Split horizontal |
 | `prefix + [` | Copy mode (vi keys) |
 | `y` (copy mode) | Copy to clipboard |
+
+## Claude Code
+
+Global instructions for [Claude Code](https://claude.ai/code) live in `claude/CLAUDE.md` and are symlinked to `~/.claude/CLAUDE.md` by `setup.sh`. Edit that file to set preferences that apply across all projects (commit conventions, communication style, etc.).
 
 ## Manual Steps
 
