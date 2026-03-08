@@ -23,7 +23,7 @@
 
 [core]
 	editor = nvim
-	excludesFile = ~/.config/git/ignore
+	excludesFile = /Users/alejandroleiton/.config/git/ignore
 
 [diff]
 	colorMoved = default  # Highlight moved lines differently

@@ -9,6 +9,7 @@ TERM = "alacritty"
 decorations = "None"
 startup_mode = "Maximized"
 dynamic_title = true
+opacity = 0.95
 
 [window.dimensions]
 columns = 180
@@ -17,6 +18,9 @@ lines = 38
 [window.padding]
 x = 8
 y = 4
+
+[general]
+live_config_reload = true
 
 [scrolling]
 history = 10000
