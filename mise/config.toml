@@ -4,7 +4,7 @@
 # =============================================================================
 
 [tools]
-ruby = "3"  # Use latest Ruby 3.x
+ruby = "3.3.5"
 
 # Add more tools as needed:
 # node = "20"

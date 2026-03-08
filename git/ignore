@@ -26,3 +26,5 @@
 # Temp files
 tmp/
 *.tmp
+
+**/.claude/settings.local.json

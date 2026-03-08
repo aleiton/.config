@@ -1,6 +1,7 @@
 # PATH setup
 PATH=/usr/local/bin:$PATH
 PATH=$HOME/bin:$PATH
+PATH="$HOME/.local/share/mise/shims:$PATH"
 PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 PATH="$XDG_DATA_HOME/gem/bin:$PATH"
 export PATH

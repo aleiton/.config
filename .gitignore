@@ -6,3 +6,6 @@ tmux/plugins
 
 # npm configstore
 configstore
+
+# GitHub CLI (contains auth tokens in hosts.yml)
+gh/
