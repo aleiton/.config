@@ -12,6 +12,7 @@ brew "fzf"                # Fuzzy finder
 brew "bat"                # Cat with syntax highlighting
 brew "tmux"               # Terminal multiplexer
 brew "neofetch"           # System info display
+brew "neovim"             # Text editor (LazyVim)
 brew "git"                # Version control
 brew "git-lfs"            # Git Large File Storage
 brew "mise"               # Runtime version manager (ruby, node, etc.)

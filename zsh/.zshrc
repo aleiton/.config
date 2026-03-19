@@ -40,7 +40,7 @@ export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 
 # Mise (runtime version manager)
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$($(brew --prefix)/bin/mise activate zsh)"
 
 # FZF - fuzzy finder (Ctrl+R for history search)
 source <(fzf --zsh)
