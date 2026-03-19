@@ -25,7 +25,6 @@ brew "zsh-syntax-highlighting"
 # Development
 # -----------------------------------------------------------------------------
 
-brew "nvm"                # Node version manager
 brew "postgresql@17"      # Database
 
 # -----------------------------------------------------------------------------

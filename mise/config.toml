@@ -5,8 +5,8 @@
 
 [tools]
 ruby = "3.3.5"
+node = "lts"
 
 # Add more tools as needed:
-# node = "20"
 # python = "3.12"
 # go = "latest"

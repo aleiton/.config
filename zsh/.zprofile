@@ -9,6 +9,3 @@ export PATH
 # Must be in .zprofile because macOS Terminal opens login shells
 eval "$($(brew --prefix)/bin/mise activate zsh)"
 
-# NVM (Node Version Manager)
-export NVM_DIR="$XDG_DATA_HOME/nvm"
-[[ -s "$(brew --prefix nvm)/nvm.sh" ]] && source "$(brew --prefix nvm)/nvm.sh"

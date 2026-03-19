@@ -97,6 +97,9 @@ directories=(
     "$CONFIG_DIR/bundle"
     "$CONFIG_DIR/pg"
     "$CONFIG_DIR/less"
+    "$CONFIG_DIR/npm"
+    "$HOME/.cache/npm"
+    "$HOME/.local/share/npm"
 )
 
 for dir in "${directories[@]}"; do
@@ -138,6 +141,19 @@ elif [[ -f "$HOME/.claude/CLAUDE.md" ]]; then
 else
     ln -sf "$CONFIG_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
     success "Created ~/.claude/CLAUDE.md symlink"
+fi
+
+# ~/.npmrc -> symlink to XDG location
+if [[ -L "$HOME/.npmrc" ]]; then
+    success "~/.npmrc symlink already exists"
+elif [[ -f "$HOME/.npmrc" ]]; then
+    warn "~/.npmrc exists as a file, backing up to ~/.npmrc.bak"
+    mv "$HOME/.npmrc" "$HOME/.npmrc.bak"
+    ln -sf "$CONFIG_DIR/npm/npmrc" "$HOME/.npmrc"
+    success "Created ~/.npmrc symlink"
+else
+    ln -sf "$CONFIG_DIR/npm/npmrc" "$HOME/.npmrc"
+    success "Created ~/.npmrc symlink"
 fi
 
 # ~/.tmux.conf -> symlink to XDG location
