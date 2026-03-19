@@ -164,8 +164,12 @@ if [[ -d "$TPM_DIR" ]]; then
 else
     info "Installing Tmux Plugin Manager..."
     git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
-    success "TPM installed (run 'prefix + I' in tmux to install plugins)"
+    success "TPM installed"
 fi
+
+info "Installing tmux plugins..."
+"$TPM_DIR/bin/install_plugins"
+success "Tmux plugins installed"
 
 # -----------------------------------------------------------------------------
 # Set Zsh as Default Shell
@@ -202,6 +206,6 @@ echo "============================================="
 echo ""
 echo "Next steps:"
 echo "  1. Restart your terminal (or run: exec zsh)"
-echo "  2. Open tmux and press 'prefix + I' to install plugins"
+echo "  2. Open tmux to verify plugins loaded correctly"
 echo "  3. Run 'neofetch' to verify everything works"
 echo ""
