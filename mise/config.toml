@@ -7,6 +7,11 @@
 ruby = "3.3.5"
 node = "lts"
 
+[settings]
+
+[settings.ruby]
+compile = false
+
 # Add more tools as needed:
 # python = "3.12"
 # go = "latest"
