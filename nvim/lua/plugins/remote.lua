@@ -11,9 +11,8 @@ return {
       require("remote-nvim").setup()
 
       -- Override RemoteStart to inject a working_dir for specific hosts
-      local working_dirs = {
-        ["coder.arda"] = "/crunchloop/arda",
-      }
+      -- Populate via local.lua: vim.g.remote_working_dirs = { ["host"] = "/path" }
+      local working_dirs = vim.g.remote_working_dirs or {}
 
       vim.api.nvim_create_user_command("RemoteStart", function(opts)
         local remote_nvim = require("remote-nvim")
