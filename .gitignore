@@ -6,3 +6,9 @@ configstore
 
 # GitHub CLI (contains auth tokens in hosts.yml)
 gh/
+
+# 1Password CLI (device ID and account references)
+op/
+
+# Machine-specific Neovim overrides
+nvim/lua/config/local.lua
